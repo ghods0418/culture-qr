@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주 노포 국숫집 - 매장 안내</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 pb-10">
+
+    <!-- 헤더 영역 (언어 감지 뱃지) -->
+    <header class="bg-amber-800 text-white p-4 sticky top-0 shadow-md flex justify-between items-center z-10">
+        <div>
+            <h1 class="text-lg font-bold">제주 전통 국수 전문점</h1>
+            <p class="text-xs text-amber-200">Jeju Traditional Noodle House</p>
+        </div>
+        <div class="text-right">
+            <span id="current-lang" class="bg-amber-900 text-amber-100 text-xs px-2 py-1 rounded font-mono">
+                🌐 Detecting...
+            </span>
+            <p class="text-[10px] text-amber-200 mt-0.5">🚪 Entrance Guide</p>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto p-4 space-y-4">
+
+        <!-- 1. 비주얼 카드 및 핵심 요약 -->
+        <section class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+            <!-- 대표 이미지 영역 -->
+            <div class="bg-amber-100 h-44 flex items-center justify-center text-amber-800 font-bold relative">
+                <span class="text-5xl">🍜 🥩</span>
+                <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-1 rounded">
+                    제주 전통 노포 (Jeju Local Restaurant)
+                </span>
+            </div>
+            
+            <div class="p-4 space-y-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h2 class="font-bold text-base text-gray-900">제주 고기국수 & 돔베고기</h2>
+                        <p class="text-xs text-gray-500">Pork Noodle & Boiled Pork</p>
+                    </div>
+                    <span class="bg-amber-100 text-amber-900 text-xs font-bold px-2 py-1 rounded">
+                        10,000원~20,000원
+                    </span>
+                </div>
+
+                <!-- 식재료 요약 픽토그램 -->
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="bg-gray-100 text-gray-700 text-xs px-2.5 py-1 rounded-full flex items-center">
+                        <span class="mr-1">🐷</span> 돼지고기 (Pork)
+                    </span>
+                    <span class="bg-gray-100 text-gray-700 text-xs px-2.5 py-1 rounded-full flex items-center">
+                        <span class="mr-1">🐟</span> 멸치육수 (Anchovy)
+                    </span>
+                    <span class="bg-gray-100 text-gray-700 text-xs px-2.5 py-1 rounded-full flex items-center">
+                        <span class="mr-1">🌶️</span> 안 매움 (Not Spicy)
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 입장 절차 문화 안내 (핵심 가이드) -->
+        <section class="bg-amber-50 border-2 border-amber-400 rounded-xl p-4 shadow-sm space-y-3">
+            <div class="flex items-center space-x-2 border-b border-amber-200 pb-2">
+                <span class="text-2xl">🚶‍♂️</span>
+                <h2 class="font-bold text-amber-900 text-sm">입장 안내 (How to Enter)</h2>
+            </div>
+
+            <p class="text-xs text-amber-800 leading-relaxed">
+                식당 문 안으로 들어오셔서 <strong>방문 인원수(예: 3명)</strong>를 먼저 직원에게 말씀해 주세요. 안내받은 자리에 앉으시면 됩니다.
+            </p>
+
+            <!-- 직관적인 인원수 표시 픽토그램 카드 -->
+            <div class="bg-white p-3 rounded-lg border border-amber-200 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">👨‍👩‍👧</span>
+                    <span class="text-xs font-bold text-gray-800">방문 인원 알려주기</span>
+                </div>
+                <span class="text-xs bg-amber-800 text-white font-bold px-2.5 py-1 rounded">
+                    "3명이에요" 👋
+                </span>
+            </div>
+        </section>
+
+        <!-- 3. 매장 이용 전 사전 안내사항 -->
+        <section class="bg-white rounded-xl p-4 shadow-sm border border-gray-200 space-y-3">
+            <h2 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center">
+                <span class="mr-2">ℹ️</span> 이용 전 안내사항
+            </h2>
+
+            <div class="text-xs space-y-2 text-gray-700">
+                <div class="flex items-start space-x-2">
+                    <span>📌</span>
+                    <p><strong>1인 1메뉴:</strong> 1인당 최소 1개 이상의 메뉴 주문 부탁드립니다.</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                    <span>🧳</span>
+                    <p><strong>큰 짐/캐리어:</strong> 캐리어는 입구 쪽 지정 공간에 보관해 주세요.</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                    <span>💳</span>
+                    <p><strong>결제:</strong> 현금, 신용카드 가능 (위챗페이 등 일부 해외 간편결제 불가)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FE-06: 피드백 / 질문 입력 폼 -->
+        <section class="bg-amber-50 rounded-xl p-4 border border-amber-200 space-y-3">
+            <h3 class="font-bold text-xs text-amber-900 flex items-center">
+                <span class="mr-1.5">💬</span> 궁금한 점이나 불편한 점이 있으신가요?
+            </h3>
+            <p class="text-[11px] text-amber-800">
+                자국어로 편하게 적어주시면 서비스 개선에 큰 도움이 됩니다.
+            </p>
+            <form id="feedback-form-index" onsubmit="event.preventDefault(); alert('의견이 전달되었습니다. 감사합니다!');" class="space-y-2">
+                <textarea name="feedback" rows="2" 
+                    placeholder="예: 아기의자가 있나요? / Is there a high chair?" 
+                    class="w-full text-xs p-2.5 rounded-lg border border-amber-300 focus:outline-none focus:ring-1 focus:ring-amber-500 bg-white" required></textarea>
+                <button type="submit" 
+                    class="w-full bg-amber-800 text-white text-xs font-bold py-2.5 rounded-lg hover:bg-amber-900 transition">
+                    의견 보내기 (Send)
+                </button>
+            </form>
+        </section>
+
+        <!-- 테이블 QR 안내 문구 -->
+        <div class="text-center p-2 text-xs text-gray-500">
+            💡 착석 후 테이블 옆 QR을 스캔하시면 상세 메뉴 및 수저통 위치가 안내됩니다.
+        </div>
+
+    </main>
+
+    <!-- FE-01: 브라우저 언어 감지 스크립트 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+            const langBadge = document.getElementById('current-lang');
+            
+            let langCode = 'EN';
+            if (userLang.includes('es')) langCode = 'ES';
+            else if (userLang.includes('ko')) langCode = 'KO';
+            else if (userLang.includes('zh')) langCode = 'ZH';
+            else if (userLang.includes('ja')) langCode = 'JA';
+            else langCode = userLang.substring(0, 2).toUpperCase();
+
+            langBadge.textContent = `🌐 Auto (${langCode})`;
+        });
+    </script>
+</body>
+</html>
