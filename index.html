@@ -108,7 +108,7 @@
             </div>
         </section>
 
-        <!-- FE-06 & BE-01: 피드백 / 질문 입력 폼 (구글 폼 자동 연동) -->
+        <!-- FE-06 & BE-01: 피드백 / 질문 입력 폼 (올바른 Action URL 적용) -->
         <section class="bg-amber-50 rounded-xl p-4 border border-amber-200 space-y-3">
             <h3 class="font-bold text-xs text-amber-900 flex items-center">
                 <span class="mr-1.5">💬</span> 궁금한 점이나 불편한 점이 있으신가요?
@@ -117,14 +117,12 @@
                 자국어로 편하게 적어주시면 서비스 개선에 큰 도움이 됩니다.
             </p>
             
-            <!-- 구글 폼 전송 Action 설정 -->
-            <form action="https://docs.google.com/forms/d/e/1GnccTDwmxRa0BB5gH9PIzZyAjmQqB1xN_5NO1NFIsMA/formResponse" 
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeyvD-4FqlkzpmtfspVOQEe_GMR6dRQFsOJKL3Q/formResponse" 
                 method="POST" 
                 target="hidden_iframe_index" 
                 onsubmit="alert('의견이 성공적으로 전달되었습니다. 감사합니다!');" 
                 class="space-y-2">
                 
-                <!-- 추출된 entry.id 바인딩 -->
                 <textarea name="entry.1704004397" rows="2" 
                     placeholder="예: 아기의자가 있나요? / Is there a high chair?" 
                     class="w-full text-xs p-2.5 rounded-lg border border-amber-300 focus:outline-none focus:ring-1 focus:ring-amber-500 bg-white" required></textarea>
@@ -135,7 +133,6 @@
                 </button>
             </form>
             
-            <!-- 페이지 전환 방지용 아이프레임 -->
             <iframe name="hidden_iframe_index" id="hidden_iframe_index" style="display:none;"></iframe>
         </section>
 
