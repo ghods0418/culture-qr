@@ -163,7 +163,7 @@
             </div>
         </section>
 
-        <!-- FE-06: 피드백 / 질문 입력 폼 -->
+        <!-- FE-06 & BE-01: 피드백 / 질문 입력 폼 (구글 폼 자동 연동) -->
         <section class="bg-amber-50 rounded-xl p-4 border border-amber-200 space-y-3">
             <h3 class="font-bold text-xs text-amber-900 flex items-center">
                 <span class="mr-1.5">💬</span> 궁금한 점이나 불편한 점이 있으신가요?
@@ -171,15 +171,27 @@
             <p class="text-[11px] text-amber-800">
                 자국어로 편하게 적어주시면 서비스 개선에 큰 도움이 됩니다.
             </p>
-            <form id="feedback-form-table" onsubmit="event.preventDefault(); alert('의견이 전달되었습니다. 감사합니다!');" class="space-y-2">
-                <textarea name="feedback" rows="2" 
+            
+            <!-- 구글 폼 전송 Action 설정 -->
+            <form action="https://docs.google.com/forms/d/e/entry.1704004397/formResponse" 
+                method="POST" 
+                target="hidden_iframe_table" 
+                onsubmit="alert('의견이 성공적으로 전달되었습니다. 감사합니다!');" 
+                class="space-y-2">
+                
+                <!-- 추출된 entry.id 바인딩 -->
+                <textarea name="entry.1704004397" rows="2" 
                     placeholder="예: 물티슈는 어디에 있나요? / Where are the wet wipes?" 
                     class="w-full text-xs p-2.5 rounded-lg border border-amber-300 focus:outline-none focus:ring-1 focus:ring-amber-500 bg-white" required></textarea>
+                
                 <button type="submit" 
                     class="w-full bg-amber-800 text-white text-xs font-bold py-2.5 rounded-lg hover:bg-amber-900 transition">
                     의견 보내기 (Send)
                 </button>
             </form>
+            
+            <!-- 페이지 전환 방지용 아이프레임 -->
+            <iframe name="hidden_iframe_table" id="hidden_iframe_table" style="display:none;"></iframe>
         </section>
 
     </main>
