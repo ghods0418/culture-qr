@@ -116,24 +116,25 @@
             <p class="text-[11px] text-amber-800">
                 자국어로 편하게 적어주시면 서비스 개선에 큰 도움이 됩니다.
             </p>
-            
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeyvD-4FqlkzpmtfspVOQEe_GMR6dRQFsOJKL3Q/formResponse" 
-                method="POST" 
-                target="hidden_iframe_index" 
-                onsubmit="alert('의견이 성공적으로 전달되었습니다. 감사합니다!');" 
-                class="space-y-2">
-                
-                <textarea name="entry.1704004397" rows="2" 
-                    placeholder="예: 아기의자가 있나요? / Is there a high chair?" 
-                    class="w-full text-xs p-2.5 rounded-lg border border-amber-300 focus:outline-none focus:ring-1 focus:ring-amber-500 bg-white" required></textarea>
-                
-                <button type="submit" 
-                    class="w-full bg-amber-800 text-white text-xs font-bold py-2.5 rounded-lg hover:bg-amber-900 transition">
-                    의견 보내기 (Send)
-                </button>
-            </form>
-            
-            <iframe name="hidden_iframe_index" id="hidden_iframe_index" style="display:none;"></iframe>
+
+        <!-- 최종 수정된 구글 폼 연동 코드 -->
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeyvD-4FqlkzpmtfspV0QEe_GMR6d14IzEnkl0aRQFsOJkL3Q/formResponse" 
+            method="POST" 
+            target="hidden_iframe" 
+            onsubmit="alert('의견이 성공적으로 전달되었습니다. 감사합니다!');" 
+            class="space-y-2">
+
+            <textarea name="entry.1704004397" rows="2" 
+                placeholder="자국어로 편하게 적어주세요..." 
+                class="w-full text-xs p-2.5 rounded-lg border border-amber-300 focus:outline-none focus:ring-1 focus:ring-amber-500 bg-white" required></textarea>
+
+            <button type="submit" 
+                class="w-full bg-amber-800 text-white text-xs font-bold py-2.5 rounded-lg hover:bg-amber-900 transition">
+                의견 보내기 (Send)
+            </button>
+        </form>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         </section>
 
         <!-- 테이블 QR 안내 문구 -->
