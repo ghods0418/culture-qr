@@ -1,8 +1,7 @@
-// i18n.js - 다국어 자동 감지 및 수동 변경 엔진 (Placeholder & Element 확장 지원)
+// i18n.js - 다국어 자동 감지 및 수동 변경 엔진
 
 let currentTranslations = {};
 
-// 1. 브라우저 언어 감지
 function detectLanguage() {
     const savedLang = localStorage.getItem('user_lang');
     if (savedLang) return savedLang;
@@ -15,11 +14,10 @@ function detectLanguage() {
     return 'en';
 }
 
-// 2. 화면 텍스트 및 속성 실시간 적용
 function applyTranslations(langData, langCode) {
     const translations = langData[langCode] || langData['en'];
     
-    // 일반 텍스트 변경
+    // 일반 텍스트 및 HTML 태그 적용
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const keys = element.getAttribute('data-i18n').split('.');
         let text = translations;
@@ -29,11 +27,11 @@ function applyTranslations(langData, langCode) {
         });
 
         if (text) {
-            element.textContent = text;
+            element.innerHTML = text;
         }
     });
 
-    // 입력창 placeholder 변경
+    // 입력창 placeholder 적용
     document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
         const keys = element.getAttribute('data-i18n-placeholder').split('.');
         let text = translations;
@@ -48,7 +46,6 @@ function applyTranslations(langData, langCode) {
     });
 }
 
-// 3. 메인 실행 함수
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const response = await fetch('lang.json');
