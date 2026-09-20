@@ -11,7 +11,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 pb-10">
 
-    <!-- 상단 헤더 (언어 감지 뱃지 & 테이블 번호) -->
+    <!-- 상단 헤더 -->
     <header class="bg-amber-800 text-white p-4 sticky top-0 shadow-md flex justify-between items-center z-10">
         <div>
             <h1 class="text-lg font-bold">제주 전통 국수 전문점</h1>
@@ -27,14 +27,14 @@
 
     <main class="max-w-md mx-auto p-4 space-y-4">
 
-        <!-- FE-03: 1. 알레르기 및 식재료 주의 섹션 (최상단 배치) -->
+        <!-- 1. 알레르기 및 식재료 주의 섹션 -->
         <section class="bg-red-50 border-2 border-red-400 rounded-xl p-4 shadow-sm">
             <div class="flex items-center space-x-2 border-b border-red-200 pb-2 mb-3">
                 <span class="text-xl">⚠️</span>
                 <h2 class="font-bold text-red-800 text-sm">알레르기 및 식재료 주의 (Allergy Warning)</h2>
             </div>
             <p class="text-xs text-red-700 mb-3">
-                저희 매장의 주요 메뉴에는 아래 재료가 포함되어 있습니다. 식이요법이나 알레르기가 있으신 경우 참고해 주세요.
+                주요 메뉴에는 아래 재료가 포함되어 있습니다. 식이요법이나 알레르기가 있으신 경우 참고해 주세요.
             </p>
             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                 <div class="bg-white p-2 rounded border border-red-200 shadow-xs">
@@ -53,12 +53,21 @@
                     <span class="text-[10px] text-gray-500">Soy / Wheat</span>
                 </div>
             </div>
-            <p class="text-[11px] text-red-600 mt-3 italic text-center">
-                * 특정 재료를 제외하고 싶으신 경우, 주문 전 직원에게 말씀해 주세요.
+        </section>
+
+        <!-- 2. 흑돼지 식문화 해설 (비계 & 털 자국 이질감 해소) -->
+        <section class="bg-amber-50 border border-amber-300 rounded-xl p-4 shadow-sm space-y-2">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl">💡</span>
+                <h2 class="font-bold text-amber-900 text-xs">제주 흑돼지 식문화 안내 (Jeju Black Pork Guide)</h2>
+            </div>
+            <p class="text-[11px] text-amber-800 leading-relaxed">
+                • <strong>두꺼운 비계(껍데기):</strong> 제주 흑돼지는 쫀득한 식감을 위해 비계와 껍데기를 함께 제공합니다.<br>
+                • <strong>검은 털 자국:</strong> 껍데기의 검은 흔적은 인공물이 아닌 신선한 진짜 흑돼지임을 증명하는 자연스러운 현상입니다. 안심하고 드셔도 됩니다!
             </p>
         </section>
 
-        <!-- FE-04: 2. 테이블 이용 및 한국 식당 문화 가이드 -->
+        <!-- 3. 한국 식당 문화 가이드 & 멜젓 맛있게 먹는 법 -->
         <section class="bg-white rounded-xl p-4 shadow-sm border border-gray-200 space-y-3">
             <h2 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center">
                 <span class="mr-2">💡</span> 한국 식당 이용 문화 가이드
@@ -81,34 +90,33 @@
                 <div>
                     <h3 class="font-bold text-xs text-blue-900">가위 사용 안내</h3>
                     <p class="text-xs text-blue-800 mt-0.5">
-                        한국에서는 가위로 면이나 고기를 자릅니다. 위생적인 식기용 가위이니 안심하고 사용하세요.
+                        면이나 고기가 길 경우 위생 가위로 편하게 잘라 드시면 됩니다.
                     </p>
                 </div>
             </div>
 
-            <!-- 매장 에티켓 -->
-            <div class="flex items-start space-x-3 bg-gray-50 p-3 rounded-lg border border-gray-200">
-                <span class="text-2xl">🤫</span>
+            <!-- 향토 양념 멜젓 가이드 -->
+            <div class="flex items-start space-x-3 bg-red-50 p-3 rounded-lg border border-red-200">
+                <span class="text-2xl">🐟</span>
                 <div>
-                    <h3 class="font-bold text-xs text-gray-900">식당 내 에티켓</h3>
-                    <p class="text-xs text-gray-600 mt-0.5">
-                        대화는 적당한 크기로 해 주시고, 캐리어 등 큰 짐은 입구 보관 장소를 이용해 주세요.
+                    <h3 class="font-bold text-xs text-red-900">제주 멜젓(멸치 젓갈) 소스 팁</h3>
+                    <p class="text-xs text-red-800 mt-0.5">
+                        감칠맛이 풍부한 제주 전통 소스입니다. 불판에 끓인 뒤 고기를 찍어 드시면 맛이 더욱 좋아집니다!
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- FE-05: 3. 상세 메뉴 해설 -->
+        <!-- 4. 상세 메뉴 해설 -->
         <section class="bg-white rounded-xl p-4 shadow-sm border border-gray-200 space-y-4">
             <h2 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center">
                 <span class="mr-2">🍜</span> 주요 메뉴 안내
             </h2>
 
-            <!-- 메뉴 1 -->
             <div class="border-b border-gray-100 pb-3">
                 <div class="flex justify-between items-start">
                     <div>
-                        <h3 class="font-bold text-sm text-gray-800">고기국수</h3>
+                        <h3 class="font-bold text-sm text-gray-800">고기국수 <span class="text-[10px] bg-green-100 text-green-800 px-1.5 py-0.5 rounded ml-1">1인 주문 가능</span></h3>
                         <p class="text-[11px] text-gray-500">Pork Noodle Soup</p>
                     </div>
                     <span class="font-bold text-amber-800 text-sm">12,000원</span>
@@ -118,7 +126,6 @@
                 </p>
             </div>
 
-            <!-- 메뉴 2 -->
             <div class="border-b border-gray-100 pb-3">
                 <div class="flex justify-between items-start">
                     <div>
@@ -132,7 +139,6 @@
                 </p>
             </div>
 
-            <!-- 메뉴 3 -->
             <div class="border-b border-gray-100 pb-3">
                 <div class="flex justify-between items-start">
                     <div>
@@ -142,7 +148,7 @@
                     <span class="font-bold text-amber-800 text-sm">20,000원</span>
                 </div>
                 <p class="text-xs text-gray-600 mt-1">
-                    '돔베'는 도마를 뜻하는 제주 방언입니다. 도마 위 수육을 갈치속젓이나 쌈장에 싸 먹는 대표 요리입니다.
+                    '돔베'는 도마를 뜻하는 제주 방언입니다. 도마 위 수육을 멜젓이나 쌈장에 싸 먹는 대표 요리입니다.
                 </p>
             </div>
 
@@ -151,19 +157,35 @@
             </div>
         </section>
 
-        <!-- FE-05: 4. 셀프바 및 결제 안내 -->
+        <!-- 5. 셀프바 리필 & 세부 규정 안내 -->
         <section class="bg-white rounded-xl p-4 shadow-sm border border-gray-200 space-y-3">
             <h2 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center">
-                <span class="mr-2">💳</span> 셀프바 및 결제 안내
+                <span class="mr-2">💳</span> 셀프바 및 매장 이용 규정
             </h2>
             <div class="text-xs space-y-2 text-gray-700">
-                <p><strong>🥛 무료 셀프바:</strong> 물과 추가 반찬(김치, 고추, 쌈장)은 계산대 옆 무료 셀프바를 이용하세요.</p>
-                <p><strong>💳 가능 결제:</strong> 현금(원화 KRW), 신용카드(Visa, Master 등), 계좌송금</p>
+                <p><strong>🥛 무료 셀프바 (Free Refill):</strong> 김치, 고추, 쌈장 등 기본 반찬은 셀프바에서 무료로 추가하실 수 있습니다.</p>
+                <p><strong>💳 가능 결제:</strong> 현금(원화 KRW), 신용카드(Visa, Master 등)</p>
                 <p class="text-red-600"><strong>❌ 불가 결제:</strong> 위챗페이(WeChat Pay) 등 일부 해외 간편결제 서비스 이용 불가</p>
+            </div>
+
+            <!-- 세부 규정 아이콘 표지판 -->
+            <div class="grid grid-cols-3 gap-2 pt-2 border-t text-center text-[10px] text-gray-600">
+                <div class="bg-gray-50 p-2 rounded">
+                    <span class="text-base block mb-0.5">🚫🐶</span>
+                    <span>반려동물 출입금지</span>
+                </div>
+                <div class="bg-gray-50 p-2 rounded">
+                    <span class="text-base block mb-0.5">🍷</span>
+                    <span>콜키지 유료 문의</span>
+                </div>
+                <div class="bg-gray-50 p-2 rounded">
+                    <span class="text-base block mb-0.5">🚭</span>
+                    <span>전 구역 금연</span>
+                </div>
             </div>
         </section>
 
-        <!-- FE-06 & BE-01: 피드백 / 질문 입력 폼 (올바른 Action URL 적용) -->
+        <!-- 피드백 입력 폼 -->
         <section class="bg-amber-50 rounded-xl p-4 border border-amber-200 space-y-3">
             <h3 class="font-bold text-xs text-amber-900 flex items-center">
                 <span class="mr-1.5">💬</span> 궁금한 점이나 불편한 점이 있으신가요?
@@ -171,30 +193,28 @@
             <p class="text-[11px] text-amber-800">
                 자국어로 편하게 적어주시면 서비스 개선에 큰 도움이 됩니다.
             </p>
-
-            <!-- 최종 수정된 구글 폼 연동 코드 -->
+            
             <form action="https://docs.google.com/forms/d/e/1FAIpQLSeyvD-4FqlkzpmtfspV0QEe_GMR6d14IzEnkl0aRQFsOJkL3Q/formResponse" 
                 method="POST" 
-                target="hidden_iframe" 
+                target="hidden_iframe_table" 
                 onsubmit="alert('의견이 성공적으로 전달되었습니다. 감사합니다!');" 
                 class="space-y-2">
-
+                
                 <textarea name="entry.1704004397" rows="2" 
-                    placeholder="자국어로 편하게 적어주세요..." 
+                    placeholder="예: 물티슈는 어디에 있나요? / Where are the wet wipes?" 
                     class="w-full text-xs p-2.5 rounded-lg border border-amber-300 focus:outline-none focus:ring-1 focus:ring-amber-500 bg-white" required></textarea>
-
+                
                 <button type="submit" 
                     class="w-full bg-amber-800 text-white text-xs font-bold py-2.5 rounded-lg hover:bg-amber-900 transition">
                     의견 보내기 (Send)
                 </button>
             </form>
-
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+            
+            <iframe name="hidden_iframe_table" id="hidden_iframe_table" style="display:none;"></iframe>
         </section>
 
     </main>
 
-    <!-- FE-01: 브라우저 언어 감지 스크립트 -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
