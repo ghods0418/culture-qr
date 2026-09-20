@@ -11,17 +11,22 @@
 </head>
 <body class="bg-gray-100 text-gray-800 pb-10">
 
-    <!-- 상단 헤더 -->
+    <!-- 상단 헤더 (언어 선택 드롭다운 부착) -->
     <header class="bg-amber-800 text-white p-4 sticky top-0 shadow-md flex justify-between items-center z-10">
         <div>
-            <h1 class="text-lg font-bold">제주 전통 국수 전문점</h1>
-            <p class="text-xs text-amber-200">Jeju Traditional Noodle House</p>
+            <h1 class="text-lg font-bold" data-i18n="header.title">제주 전통 국수 전문점</h1>
+            <p class="text-xs text-amber-200" data-i18n="header.subtitle">Jeju Traditional Noodle House</p>
         </div>
+        
         <div class="text-right">
-            <span id="current-lang" class="bg-amber-900 text-amber-100 text-xs px-2 py-1 rounded font-mono">
-                🌐 Detecting...
-            </span>
-            <p class="text-[10px] text-amber-200 mt-0.5">📍 Table No. 05</p>
+            <select id="lang-select" class="bg-amber-900 text-amber-100 text-xs px-2 py-1 rounded font-mono border border-amber-700 focus:outline-none cursor-pointer">
+                <option value="ko">🇰🇷 한국어</option>
+                <option value="en">🇺🇸 English</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="vi">🇻🇳 Tiếng Việt</option>
+                <option value="th">🇹🇭 ภาษาไทย</option>
+            </select>
+            <p class="text-[10px] text-amber-200 mt-0.5" data-i18n="header.table_badge">📍 Table No. 05</p>
         </div>
     </header>
 
@@ -31,76 +36,73 @@
         <section class="bg-red-50 border-2 border-red-400 rounded-xl p-4 shadow-sm">
             <div class="flex items-center space-x-2 border-b border-red-200 pb-2 mb-3">
                 <span class="text-xl">⚠️</span>
-                <h2 class="font-bold text-red-800 text-sm">알레르기 및 식재료 주의 (Allergy Warning)</h2>
+                <h2 class="font-bold text-red-800 text-sm" data-i18n="table.allergy_title">알레르기 및 식재료 주의</h2>
             </div>
-            <p class="text-xs text-red-700 mb-3">
+            <p class="text-xs text-red-700 mb-3" data-i18n="table.allergy_desc">
                 주요 메뉴에는 아래 재료가 포함되어 있습니다. 식이요법이나 알레르기가 있으신 경우 참고해 주세요.
             </p>
             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                 <div class="bg-white p-2 rounded border border-red-200 shadow-xs">
                     <span class="text-2xl block mb-1">🐷</span>
-                    <span class="font-bold text-gray-800 block">돼지고기</span>
+                    <span class="font-bold text-gray-800 block" data-i18n="table.allergy_pork">돼지고기</span>
                     <span class="text-[10px] text-gray-500">Pork</span>
                 </div>
                 <div class="bg-white p-2 rounded border border-red-200 shadow-xs">
                     <span class="text-2xl block mb-1">🐟</span>
-                    <span class="font-bold text-gray-800 block">해산물/젓갈</span>
+                    <span class="font-bold text-gray-800 block" data-i18n="table.allergy_seafood">해산물/젓갈</span>
                     <span class="text-[10px] text-gray-500">Seafood</span>
                 </div>
                 <div class="bg-white p-2 rounded border border-red-200 shadow-xs">
                     <span class="text-2xl block mb-1">🌾</span>
-                    <span class="font-bold text-gray-800 block">대두 / 밀</span>
+                    <span class="font-bold text-gray-800 block" data-i18n="table.allergy_soy">대두 / 밀</span>
                     <span class="text-[10px] text-gray-500">Soy / Wheat</span>
                 </div>
             </div>
         </section>
 
-        <!-- 2. 흑돼지 식문화 해설 (비계 & 털 자국 이질감 해소) -->
+        <!-- 2. 흑돼지 식문화 해설 -->
         <section class="bg-amber-50 border border-amber-300 rounded-xl p-4 shadow-sm space-y-2">
             <div class="flex items-center space-x-2">
                 <span class="text-xl">💡</span>
-                <h2 class="font-bold text-amber-900 text-xs">제주 흑돼지 식문화 안내 (Jeju Black Pork Guide)</h2>
+                <h2 class="font-bold text-amber-900 text-xs" data-i18n="table.pork_guide_title">제주 흑돼지 식문화 안내</h2>
             </div>
-            <p class="text-[11px] text-amber-800 leading-relaxed">
+            <p class="text-[11px] text-amber-800 leading-relaxed" data-i18n="table.pork_guide_desc">
                 • <strong>두꺼운 비계(껍데기):</strong> 제주 흑돼지는 쫀득한 식감을 위해 비계와 껍데기를 함께 제공합니다.<br>
                 • <strong>검은 털 자국:</strong> 껍데기의 검은 흔적은 인공물이 아닌 신선한 진짜 흑돼지임을 증명하는 자연스러운 현상입니다. 안심하고 드셔도 됩니다!
             </p>
         </section>
 
-        <!-- 3. 한국 식당 문화 가이드 & 멜젓 맛있게 먹는 법 -->
+        <!-- 3. 한국 식당 문화 가이드 & 멜젓 소스 -->
         <section class="bg-white rounded-xl p-4 shadow-sm border border-gray-200 space-y-3">
             <h2 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center">
-                <span class="mr-2">💡</span> 한국 식당 이용 문화 가이드
+                <span class="mr-2">💡</span> <span data-i18n="table.culture_title">한국 식당 이용 문화 가이드</span>
             </h2>
             
-            <!-- 수저통 위치 -->
             <div class="flex items-start space-x-3 bg-amber-50 p-3 rounded-lg border border-amber-200">
                 <span class="text-2xl">🗄️</span>
                 <div>
-                    <h3 class="font-bold text-xs text-amber-900">수저통 위치</h3>
-                    <p class="text-xs text-amber-800 mt-0.5">
+                    <h3 class="font-bold text-xs text-amber-900" data-i18n="table.cutlery_title">수저통 위치</h3>
+                    <p class="text-xs text-amber-800 mt-0.5" data-i18n="table.cutlery_desc">
                         숟가락, 젓가락, 휴지는 <strong>[테이블 옆면 서랍]</strong> 안에 있습니다.
                     </p>
                 </div>
             </div>
 
-            <!-- 가위 사용법 -->
             <div class="flex items-start space-x-3 bg-blue-50 p-3 rounded-lg border border-blue-200">
                 <span class="text-2xl">✂️</span>
                 <div>
-                    <h3 class="font-bold text-xs text-blue-900">가위 사용 안내</h3>
-                    <p class="text-xs text-blue-800 mt-0.5">
+                    <h3 class="font-bold text-xs text-blue-900" data-i18n="table.scissors_title">가위 사용 안내</h3>
+                    <p class="text-xs text-blue-800 mt-0.5" data-i18n="table.scissors_desc">
                         면이나 고기가 길 경우 위생 가위로 편하게 잘라 드시면 됩니다.
                     </p>
                 </div>
             </div>
 
-            <!-- 향토 양념 멜젓 가이드 -->
             <div class="flex items-start space-x-3 bg-red-50 p-3 rounded-lg border border-red-200">
                 <span class="text-2xl">🐟</span>
                 <div>
-                    <h3 class="font-bold text-xs text-red-900">제주 멜젓(멸치 젓갈) 소스 팁</h3>
-                    <p class="text-xs text-red-800 mt-0.5">
+                    <h3 class="font-bold text-xs text-red-900" data-i18n="table.anchovy_title">제주 멜젓(멸치 젓갈) 소스 팁</h3>
+                    <p class="text-xs text-red-800 mt-0.5" data-i18n="table.anchovy_desc">
                         감칠맛이 풍부한 제주 전통 소스입니다. 불판에 끓인 뒤 고기를 찍어 드시면 맛이 더욱 좋아집니다!
                     </p>
                 </div>
@@ -110,18 +112,21 @@
         <!-- 4. 상세 메뉴 해설 -->
         <section class="bg-white rounded-xl p-4 shadow-sm border border-gray-200 space-y-4">
             <h2 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center">
-                <span class="mr-2">🍜</span> 주요 메뉴 안내
+                <span class="mr-2">🍜</span> <span data-i18n="table.menu_title">주요 메뉴 안내</span>
             </h2>
 
             <div class="border-b border-gray-100 pb-3">
                 <div class="flex justify-between items-start">
                     <div>
-                        <h3 class="font-bold text-sm text-gray-800">고기국수 <span class="text-[10px] bg-green-100 text-green-800 px-1.5 py-0.5 rounded ml-1">1인 주문 가능</span></h3>
+                        <h3 class="font-bold text-sm text-gray-800">
+                            <span data-i18n="table.menu_pork_title">고기국수</span>
+                            <span class="text-[10px] bg-green-100 text-green-800 px-1.5 py-0.5 rounded ml-1" data-i18n="table.menu_solo_badge">1인 주문 가능</span>
+                        </h3>
                         <p class="text-[11px] text-gray-500">Pork Noodle Soup</p>
                     </div>
                     <span class="font-bold text-amber-800 text-sm">12,000원</span>
                 </div>
-                <p class="text-xs text-gray-600 mt-1">
+                <p class="text-xs text-gray-600 mt-1" data-i18n="table.menu_pork_desc">
                     진한 돼지뼈 육수에 삼겹살 수육이 올려진 담백한 국수입니다. (안 매움 / 돼지고기 포함)
                 </p>
             </div>
@@ -129,12 +134,12 @@
             <div class="border-b border-gray-100 pb-3">
                 <div class="flex justify-between items-start">
                     <div>
-                        <h3 class="font-bold text-sm text-gray-800">멸고국수</h3>
+                        <h3 class="font-bold text-sm text-gray-800" data-i18n="table.menu_anchovy_title">멸고국수</h3>
                         <p class="text-[11px] text-gray-500">Anchovy & Pork Noodle</p>
                     </div>
                     <span class="font-bold text-amber-800 text-sm">11,000원</span>
                 </div>
-                <p class="text-xs text-gray-600 mt-1">
+                <p class="text-xs text-gray-600 mt-1" data-i18n="table.menu_anchovy_desc">
                     담백한 멸치 육수(해산물)에 삼겹살 수육 고명을 올린 콤보 메뉴입니다.
                 </p>
             </div>
@@ -142,45 +147,45 @@
             <div class="border-b border-gray-100 pb-3">
                 <div class="flex justify-between items-start">
                     <div>
-                        <h3 class="font-bold text-sm text-gray-800">돔베고기</h3>
+                        <h3 class="font-bold text-sm text-gray-800" data-i18n="table.menu_dombe_title">돔베고기</h3>
                         <p class="text-[11px] text-gray-500">Boiled Pork Slices on Chopping Board</p>
                     </div>
                     <span class="font-bold text-amber-800 text-sm">20,000원</span>
                 </div>
-                <p class="text-xs text-gray-600 mt-1">
+                <p class="text-xs text-gray-600 mt-1" data-i18n="table.menu_dombe_desc">
                     '돔베'는 도마를 뜻하는 제주 방언입니다. 도마 위 수육을 멜젓이나 쌈장에 싸 먹는 대표 요리입니다.
                 </p>
             </div>
 
-            <div class="bg-gray-100 p-2.5 rounded text-center text-xs text-gray-700 font-medium">
-                📌 저희 식당은 <strong>1인당 최소 1개 이상의 메뉴</strong> 주문을 부탁드립니다.
+            <div class="bg-gray-100 p-2.5 rounded text-center text-xs text-gray-700 font-medium" data-i18n="table.menu_rule_notice">
+                📌 저희 식당은 1인당 최소 1개 이상의 메뉴 주문을 부탁드립니다.
             </div>
         </section>
 
-        <!-- 5. 셀프바 리필 & 세부 규정 안내 -->
+        <!-- 5. 셀프바 및 매장 이용 규정 -->
         <section class="bg-white rounded-xl p-4 shadow-sm border border-gray-200 space-y-3">
             <h2 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center">
-                <span class="mr-2">💳</span> 셀프바 및 매장 이용 규정
+                <span class="mr-2">💳</span> <span data-i18n="table.rule_title">셀프바 및 매장 이용 규정</span>
             </h2>
             <div class="text-xs space-y-2 text-gray-700">
-                <p><strong>🥛 무료 셀프바 (Free Refill):</strong> 김치, 고추, 쌈장 등 기본 반찬은 셀프바에서 무료로 추가하실 수 있습니다.</p>
-                <p><strong>💳 가능 결제:</strong> 현금(원화 KRW), 신용카드(Visa, Master 등)</p>
-                <p class="text-red-600"><strong>❌ 불가 결제:</strong> 위챗페이(WeChat Pay) 등 일부 해외 간편결제 서비스 이용 불가</p>
+                <p><strong data-i18n="table.rule_refill_title">무료 셀프바:</strong> <span data-i18n="table.rule_refill_desc">김치, 고추, 쌈장 등 기본 반찬은 셀프바에서 무료로 추가하실 수 있습니다.</span></p>
+                <p><strong data-i18n="table.rule_pay_title">가능 결제:</strong> <span data-i18n="table.rule_pay_desc">현금(원화 KRW), 신용카드(Visa, Master 등)</span></p>
+                <p class="text-red-600"><strong data-i18n="table.rule_nopay_title">불가 결제:</strong> <span data-i18n="table.rule_nopay_desc">위챗페이(WeChat Pay) 등 일부 해외 간편결제 서비스 이용 불가</span></p>
             </div>
 
             <!-- 세부 규정 아이콘 표지판 -->
             <div class="grid grid-cols-3 gap-2 pt-2 border-t text-center text-[10px] text-gray-600">
                 <div class="bg-gray-50 p-2 rounded">
                     <span class="text-base block mb-0.5">🚫🐶</span>
-                    <span>반려동물 출입금지</span>
+                    <span data-i18n="table.badge_nopet">반려동물 출입금지</span>
                 </div>
                 <div class="bg-gray-50 p-2 rounded">
                     <span class="text-base block mb-0.5">🍷</span>
-                    <span>콜키지 유료 문의</span>
+                    <span data-i18n="table.badge_corkage">콜키지 유료 문의</span>
                 </div>
                 <div class="bg-gray-50 p-2 rounded">
                     <span class="text-base block mb-0.5">🚭</span>
-                    <span>전 구역 금연</span>
+                    <span data-i18n="table.badge_nosmoking">전 구역 금연</span>
                 </div>
             </div>
         </section>
@@ -188,9 +193,9 @@
         <!-- 피드백 입력 폼 -->
         <section class="bg-amber-50 rounded-xl p-4 border border-amber-200 space-y-3">
             <h3 class="font-bold text-xs text-amber-900 flex items-center">
-                <span class="mr-1.5">💬</span> 궁금한 점이나 불편한 점이 있으신가요?
+                <span class="mr-1.5">💬</span> <span data-i18n="index.feedback_title">궁금한 점이나 불편한 점이 있으신가요?</span>
             </h3>
-            <p class="text-[11px] text-amber-800">
+            <p class="text-[11px] text-amber-800" data-i18n="index.feedback_desc">
                 자국어로 편하게 적어주시면 서비스 개선에 큰 도움이 됩니다.
             </p>
             
@@ -201,10 +206,12 @@
                 class="space-y-2">
                 
                 <textarea name="entry.1704004397" rows="2" 
+                    data-i18n-placeholder="table.feedback_placeholder"
                     placeholder="예: 물티슈는 어디에 있나요? / Where are the wet wipes?" 
                     class="w-full text-xs p-2.5 rounded-lg border border-amber-300 focus:outline-none focus:ring-1 focus:ring-amber-500 bg-white" required></textarea>
                 
                 <button type="submit" 
+                    data-i18n="index.feedback_btn"
                     class="w-full bg-amber-800 text-white text-xs font-bold py-2.5 rounded-lg hover:bg-amber-900 transition">
                     의견 보내기 (Send)
                 </button>
@@ -215,20 +222,7 @@
 
     </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-            const langBadge = document.getElementById('current-lang');
-            
-            let langCode = 'EN';
-            if (userLang.includes('es')) langCode = 'ES';
-            else if (userLang.includes('ko')) langCode = 'KO';
-            else if (userLang.includes('zh')) langCode = 'ZH';
-            else if (userLang.includes('ja')) langCode = 'JA';
-            else langCode = userLang.substring(0, 2).toUpperCase();
-
-            langBadge.textContent = `🌐 Auto (${langCode})`;
-        });
-    </script>
+    <!-- i18n 번역 엔진 스크립트 연결 -->
+    <script src="i18n.js"></script>
 </body>
 </html>

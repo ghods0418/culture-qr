@@ -11,14 +11,14 @@
 </head>
 <body class="bg-gray-100 text-gray-800 pb-10">
 
-    <!-- 헤더 영역 (상단 우측 언어 선택 드롭다운 적용) -->
+    <!-- 헤더 영역 -->
     <header class="bg-amber-800 text-white p-4 sticky top-0 shadow-md flex justify-between items-center z-10">
         <div>
             <h1 class="text-lg font-bold" data-i18n="header.title">제주 전통 국수 전문점</h1>
             <p class="text-xs text-amber-200" data-i18n="header.subtitle">Jeju Traditional Noodle House</p>
         </div>
         
-        <!-- 상단 언어 수동 선택 드롭다운 -->
+        <!-- 언어 선택 드롭다운 -->
         <div class="text-right">
             <select id="lang-select" class="bg-amber-900 text-amber-100 text-xs px-2 py-1 rounded font-mono border border-amber-700 focus:outline-none cursor-pointer">
                 <option value="ko">🇰🇷 한국어</option>
@@ -33,7 +33,7 @@
 
     <main class="max-w-md mx-auto p-4 space-y-4">
 
-        <!-- 1. 비주얼 카드 및 로컬 정체성 -->
+        <!-- 1. 비주얼 카드 및 대표 메뉴 -->
         <section class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
             <div class="bg-amber-100 h-44 flex items-center justify-center text-amber-800 font-bold relative">
                 <span class="text-5xl">🍜 🥩</span>
@@ -53,7 +53,7 @@
                     </span>
                 </div>
 
-                <!-- 식재료 & 1인 이용 가능 뱃지 -->
+                <!-- 식재료 & 1인 이용 뱃지 -->
                 <div class="flex flex-wrap gap-1.5 pt-1">
                     <span class="bg-green-100 text-green-800 font-bold text-[11px] px-2.5 py-1 rounded-full flex items-center" data-i18n="index.tag_solo">
                         🙋‍♂️ 1인 식사 환영
@@ -68,7 +68,7 @@
             </div>
         </section>
 
-        <!-- 2. 원격 대기 앱 한계 해소: 현장 대기 안내 -->
+        <!-- 2. 현장 수동 대기 안내 -->
         <section class="bg-amber-50 border-2 border-amber-400 rounded-xl p-4 shadow-sm space-y-3">
             <div class="flex items-center space-x-2 border-b border-amber-200 pb-2">
                 <span class="text-2xl">📱</span>
@@ -93,42 +93,42 @@
             </div>
         </section>
 
-        <!-- 3. 사전 수칙 및 영업시간/이동 가이드 -->
+        <!-- 3. 사전 수칙 및 체크리스트 (전체 라벨 부여 완료) -->
         <section class="bg-white rounded-xl p-4 shadow-sm border border-gray-200 space-y-3">
             <h2 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center">
-                <span class="mr-2">ℹ️</span> 이용 전 사전 체크리스트
+                <span class="mr-2">ℹ️</span> <span data-i18n="index.check_title">이용 전 사전 체크리스트</span>
             </h2>
 
             <div class="text-xs space-y-2 text-gray-700">
                 <div class="flex items-start space-x-2">
                     <span>📌</span>
-                    <p><strong>1인 1메뉴:</strong> 1인당 최소 1개 이상의 메뉴 주문 부탁드립니다.</p>
+                    <p><strong data-i18n="index.check_menu_title">1인 1메뉴:</strong> <span data-i18n="index.check_menu_desc">1인당 최소 1개 이상의 메뉴 주문 부탁드립니다.</span></p>
                 </div>
                 <div class="flex items-start space-x-2">
                     <span>🧳</span>
-                    <p><strong>큰 짐/캐리어:</strong> 입구 보관 장소를 이용해 주세요.</p>
+                    <p><strong data-i18n="index.check_luggage_title">큰 짐/캐리어:</strong> <span data-i18n="index.check_luggage_desc">입구 보관 장소를 이용해 주세요.</span></p>
                 </div>
                 <div class="flex items-start space-x-2">
                     <span>💳</span>
-                    <p><strong>결제:</strong> 현금, 신용카드 가능 (위챗페이 등 해외 간편결제 불가)</p>
+                    <p><strong data-i18n="index.check_pay_title">결제:</strong> <span data-i18n="index.check_pay_desc">현금, 신용카드 가능 (위챗페이 등 해외 간편결제 불가)</span></p>
                 </div>
                 <div class="flex items-start space-x-2">
                     <span>⏰</span>
-                    <p><strong>라스트 오더:</strong> 마감 45분 전 주문 접수가 완료됩니다.</p>
+                    <p><strong data-i18n="index.check_order_title">라스트 오더:</strong> <span data-i18n="index.check_order_desc">마감 45분 전 주문 접수가 완료됩니다.</span></p>
                 </div>
                 <div class="flex items-start space-x-2">
                     <span>🚕</span>
-                    <p><strong>귀가/택시:</strong> 카카오T 앱 또는 카운터에 택시 호출 요청이 가능합니다.</p>
+                    <p><strong data-i18n="index.check_taxi_title">귀가/택시:</strong> <span data-i18n="index.check_taxi_desc">카카오T 앱 또는 카운터에 택시 호출 요청이 가능합니다.</span></p>
                 </div>
             </div>
         </section>
 
-        <!-- 피드백 / 질문 입력 폼 -->
+        <!-- 피드백 / 질문 입력 폼 (전체 라벨 부여 완료) -->
         <section class="bg-amber-50 rounded-xl p-4 border border-amber-200 space-y-3">
             <h3 class="font-bold text-xs text-amber-900 flex items-center">
-                <span class="mr-1.5">💬</span> 궁금한 점이나 불편한 점이 있으신가요?
+                <span class="mr-1.5">💬</span> <span data-i18n="index.feedback_title">궁금한 점이나 불편한 점이 있으신가요?</span>
             </h3>
-            <p class="text-[11px] text-amber-800">
+            <p class="text-[11px] text-amber-800" data-i18n="index.feedback_desc">
                 자국어로 편하게 적어주시면 서비스 개선에 큰 도움이 됩니다.
             </p>
             
@@ -139,10 +139,12 @@
                 class="space-y-2">
                 
                 <textarea name="entry.1704004397" rows="2" 
+                    data-i18n-placeholder="index.feedback_placeholder"
                     placeholder="예: 대기 시간이 얼마나 걸리나요? / How long is the wait?" 
                     class="w-full text-xs p-2.5 rounded-lg border border-amber-300 focus:outline-none focus:ring-1 focus:ring-amber-500 bg-white" required></textarea>
                 
                 <button type="submit" 
+                    data-i18n="index.feedback_btn"
                     class="w-full bg-amber-800 text-white text-xs font-bold py-2.5 rounded-lg hover:bg-amber-900 transition">
                     의견 보내기 (Send)
                 </button>
@@ -151,7 +153,7 @@
             <iframe name="hidden_iframe_index" id="hidden_iframe_index" style="display:none;"></iframe>
         </section>
 
-        <div class="text-center p-2 text-xs text-gray-500">
+        <div class="text-center p-2 text-xs text-gray-500" data-i18n="index.footer_tip">
             💡 착석 후 테이블 옆 QR을 스캔하시면 상세 메뉴 및 수저통 위치가 안내됩니다.
         </div>
 

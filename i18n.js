@@ -1,8 +1,8 @@
-// i18n.js - 다국어 자동 감지 및 수동 변경 엔진
+// i18n.js - 다국어 자동 감지 및 수동 변경 엔진 (Placeholder & Element 확장 지원)
 
 let currentTranslations = {};
 
-// 1. 브라우저 언어 감지 함수
+// 1. 브라우저 언어 감지
 function detectLanguage() {
     const savedLang = localStorage.getItem('user_lang');
     if (savedLang) return savedLang;
@@ -12,13 +12,14 @@ function detectLanguage() {
     if (navLang.startsWith('es')) return 'es';
     if (navLang.startsWith('vi')) return 'vi';
     if (navLang.startsWith('th')) return 'th';
-    return 'en'; // 기본값 영어
+    return 'en';
 }
 
-// 2. 화면 텍스트 실시간 적용 함수
+// 2. 화면 텍스트 및 속성 실시간 적용
 function applyTranslations(langData, langCode) {
     const translations = langData[langCode] || langData['en'];
     
+    // 일반 텍스트 변경
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const keys = element.getAttribute('data-i18n').split('.');
         let text = translations;
@@ -29,6 +30,20 @@ function applyTranslations(langData, langCode) {
 
         if (text) {
             element.textContent = text;
+        }
+    });
+
+    // 입력창 placeholder 변경
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const keys = element.getAttribute('data-i18n-placeholder').split('.');
+        let text = translations;
+        
+        keys.forEach(key => {
+            if (text) text = text[key];
+        });
+
+        if (text) {
+            element.setAttribute('placeholder', text);
         }
     });
 }
@@ -42,7 +57,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         const initialLang = detectLanguage();
         applyTranslations(currentTranslations, initialLang);
 
-        // 상단 언어 선택 드롭다운 이벤트 연결
         const langSelect = document.getElementById('lang-select');
         if (langSelect) {
             langSelect.value = initialLang;
