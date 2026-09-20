@@ -1,0 +1,87 @@
+{
+    "ko": {
+      "header": {
+        "title": "제주 전통 국수 전문점",
+        "subtitle": "Jeju Traditional Noodle House",
+        "entrance_badge": "🚪 매장 안내",
+        "table_badge": "📍 Table No. 05"
+      },
+      "index": {
+        "card_title": "제주 고기국수 & 돔베고기",
+        "tag_solo": "🙋‍♂️ 1인 식사 환영",
+        "tag_pork": "🐷 돼지고기 포함",
+        "tag_spicy": "🌶️ 안 매움",
+        "waiting_title": "한국 전화번호가 없으신가요?",
+        "waiting_desc": "앱(테이블링 등) 예약 없이도 카운터 직원에게 직접 말씀해주시면 대기 번호표를 발급해 드립니다.",
+        "waiting_btn": "방문 인원 알려주기"
+      }
+    },
+    "en": {
+      "header": {
+        "title": "Jeju Traditional Noodle House",
+        "subtitle": "Jeju Traditional Noodle House",
+        "entrance_badge": "🚪 Entrance Guide",
+        "table_badge": "📍 Table No. 05"
+      },
+      "index": {
+        "card_title": "Jeju Pork Noodle & Boiled Pork",
+        "tag_solo": "🙋‍♂️ Solo Diners Welcome",
+        "tag_pork": "🐷 Contains Pork",
+        "tag_spicy": "🌶️ Not Spicy",
+        "waiting_title": "No Korean Phone Number?",
+        "waiting_desc": "No app needed! Just tell our counter staff your group size to get a manual waiting number.",
+        "waiting_btn": "Tell Group Size"
+      }
+    },
+    "es": {
+      "header": {
+        "title": "Restaurante Tradicional de Fideos de Jeju",
+        "subtitle": "Jeju Traditional Noodle House",
+        "entrance_badge": "🚪 Guía de Entrada",
+        "table_badge": "📍 Mesa No. 05"
+      },
+      "index": {
+        "card_title": "Fideos de Cerdo y Cerdo Hervido de Jeju",
+        "tag_solo": "🙋‍♂️ Personas Solas Bienvenidas",
+        "tag_pork": "🐷 Contiene Cerdo",
+        "tag_spicy": "🌶️ No Picante",
+        "waiting_title": "¿No tienes número de teléfono coreano?",
+        "waiting_desc": "¡No necesitas aplicación! Solo diles el número de personas a nuestro personal de caja para obtener un número de espera manual.",
+        "waiting_btn": "Decir número de personas"
+      }
+    },
+    "vi": {
+      "header": {
+        "title": "Quán Mì Truyền Thống Jeju",
+        "subtitle": "Jeju Traditional Noodle House",
+        "entrance_badge": "🚪 Hướng Dẫn Lối Vào",
+        "table_badge": "📍 Bàn Số 05"
+      },
+      "index": {
+        "card_title": "Mì Thịt Heo & Thịt Heo Luộc Jeju",
+        "tag_solo": "🙋‍♂️ Chấp Nhận Khách Đi 1 Mình",
+        "tag_pork": "🐷 Có Thịt Heo",
+        "tag_spicy": "🌶️ Không Cay",
+        "waiting_title": "Bạn không có số điện thoại Hàn Quốc?",
+        "waiting_desc": "Không cần ứng dụng! Chỉ cần báo số lượng người cho nhân viên thu ngân để nhận số hàng đợi thủ công.",
+        "waiting_btn": "Báo Số Lượng Người"
+      }
+    },
+    "th": {
+      "header": {
+        "title": "ร้านก๋วยเตี๋ยวพื้นเมืองเชจู",
+        "subtitle": "Jeju Traditional Noodle House",
+        "entrance_badge": "🚪 คำแนะนำทางเข้า",
+        "table_badge": "📍 โต๊ะหมายเลข 05"
+      },
+      "index": {
+        "card_title": "ก๋วยเตี๋ยวหมูเชจู & หมูต้ม",
+        "tag_solo": "🙋‍♂️ ยินดีต้อนรับลูกค้าทานคนเดียว",
+        "tag_pork": "🐷 มีส่วนผสมของเนื้อหมู",
+        "tag_spicy": "🌶️ ไม่เผ็ด",
+        "waiting_title": "ไม่มีเบอร์โทรศัพท์เกาหลีใช่ไหม?",
+        "waiting_desc": "ไม่ต้องใช้แอป! เพียงแจ้งจำนวนคนกับพนักงานที่เคาน์เตอร์เพื่อรับบัตรคิวได้เลย",
+        "waiting_btn": "แจ้งจำนวนคน"
+      }
+    }
+  }
